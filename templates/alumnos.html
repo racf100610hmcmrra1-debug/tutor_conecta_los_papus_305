@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de alumnos - Tutor Conecta</title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/estilos.css') }}">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f5ff;
+            color: #1e293b;
+            text-align: center;
+        }
+
+        header {
+            background: #2563eb;
+            color: white;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        main {
+            margin: 50px auto;
+            padding: 30px;
+            max-width: 1000px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #00000015;
+        }
+
+        label {
+            font-weight: bold;
+            margin-right: 8px;
+        }
+
+        select {
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .tabla-envoltura {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 15px auto;
+            width: 100%;
+        }
+
+        th {
+            background: #2563eb;
+            color: white;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 13px 25px;
+            margin: 10px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .boton:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tutor Conecta</h1>
+        <p>Conectando familias</p>
+    </header>
+
+    <main>
+
+        <h2>Registro de alumnos</h2>
+
+        <label for="grupo">Grupo:</label>
+        <select id="grupo" name="grupo" onchange="filtrarGrupo()">
+            <option value="">Todos</option>
+            <option value="301">301</option>
+            <option value="304">304</option>
+            <option value="305">305</option>
+        </select>
+
+        <div class="tabla-envoltura">
+            <table border="1" cellpadding="6">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Grupo</th>
+                        <th>Matemáticas</th>
+                        <th>Español</th>
+                        <th>Inglés</th>
+                        <th>Historia</th>
+                        <th>Física</th>
+                        <th>Química</th>
+                        <th>Informática</th>
+                        <th>Promedio general</th>
+                    </tr>
+                </thead>
+                <tbody id="filas">
+                    <tr data-grupo="304">
+                        <td>Maximiliano</td>
+                        <td>304</td>
+                        <td>9.0</td>
+                        <td>8.5</td>
+                        <td>8.0</td>
+                        <td>9.0</td>
+                        <td>8.5</td>
+                        <td>9.0</td>
+                        <td>9.5</td>
+                        <td>8.8</td>
+                    </tr>
+                    <tr data-grupo="301">
+                        <td>Manuel</td>
+                        <td>301</td>
+                        <td>7.0</td>
+                        <td>8.0</td>
+                        <td>7.5</td>
+                        <td>8.5</td>
+                        <td>7.0</td>
+                        <td>6.5</td>
+                        <td>8.0</td>
+                        <td>7.5</td>
+                    </tr>
+                    <tr data-grupo="305">
+                        <td>Francisco</td>
+                        <td>305</td>
+                        <td>8.5</td>
+                        <td>9.0</td>
+                        <td>8.0</td>
+                        <td>8.5</td>
+                        <td>9.0</td>
+                        <td>7.5</td>
+                        <td>9.0</td>
+                        <td>8.5</td>
+                    </tr>
+                    <tr data-grupo="305">
+                        <td>Yexalen</td>
+                        <td>305</td>
+                        <td>9.5</td>
+                        <td>9.0</td>
+                        <td>9.5</td>
+                        <td>9.0</td>
+                        <td>8.5</td>
+                        <td>9.0</td>
+                        <td>10.0</td>
+                        <td>9.2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <a class="boton" href="{{ url_for('panel_principal') }}">Volver al panel principal</a>
+
+    </main>
+
+    <script>
+        function filtrarGrupo() {
+            var grupo = document.getElementById('grupo').value;
+            var filas = document.querySelectorAll('#filas tr');
+            for (var i = 0; i < filas.length; i++) {
+                if (grupo === '' || filas[i].dataset.grupo === grupo) {
+                    filas[i].style.display = '';
+                } else {
+                    filas[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

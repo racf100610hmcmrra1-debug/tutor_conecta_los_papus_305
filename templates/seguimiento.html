@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimiento Escolar - Tutor Conecta</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f0f5ff;
+            color: #1e293b;
+        }
+
+        header {
+            background: #2563eb;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .opciones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .tarjeta {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #00000012;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 12px 18px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 7px;
+        }
+
+        .boton:hover {
+            background: #1d4ed8;
+        }
+
+        .volver {
+            display: inline-block;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Tutor Conecta</h1>
+        <p>Panel de seguimiento escolar</p>
+    </header>
+
+    <main>
+        <h2>¿Qué deseas consultar?</h2>
+        <p>Selecciona una de las siguientes opciones.</p>
+
+        <div class="opciones">
+
+            <section class="tarjeta">
+                <h3>Calificaciones</h3>
+                <p>Consulta tus notas escolares.</p>
+                <a class="boton"
+                   href="{{ url_for('calificaciones') }}">
+                    Ver calificaciones
+                </a>
+            </section>
+
+            <section class="tarjeta">
+                <h3>Faltas</h3>
+                <p>Consulta tu asistencia semanal.</p>
+                <a class="boton"
+                   href="{{ url_for('faltas') }}">
+                    Ver faltas
+                </a>
+            </section>
+
+            <section class="tarjeta">
+                <h3>Reportes</h3>
+                <p>Consulta los reportes escolares.</p>
+                <a class="boton"
+                   href="{{ url_for('reportes') }}">
+                    Ver reportes
+                </a>
+            </section>
+
+        </div>
+
+        <a class="volver" href="{{ url_for('inicio') }}">
+            Volver al panel principal
+        </a>
+    </main>
+
+</body>
+</html>

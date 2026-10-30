@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quejas - Tutor Conecta</title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Tutor Conecta</h1>
+        <p>Conectando familias</p>
+    </header>
+
+    <main class="medio">
+
+        <h2>Quejas y comentarios de mejora</h2>
+
+        <div class="tabla-envoltura">
+            <table border="1" cellpadding="6">
+                <thead>
+                    <tr>
+                        <th>Número de control</th>
+                        <th>Nombre</th>
+                        <th>Grupo</th>
+                        <th>Semestre</th>
+                        <th>Comentarios de mejora</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>24010001</td>
+                        <td>Maximiliano</td>
+                        <td>304</td>
+                        <td>1</td>
+                        <td>Participar más en la clase de Inglés.</td>
+                    </tr>
+                    <tr>
+                        <td>23020014</td>
+                        <td>Manuel</td>
+                        <td>301</td>
+                        <td>3</td>
+                        <td>Mejorar la puntualidad y reforzar Química y Física con asesorías.</td>
+                    </tr>
+                    <tr>
+                        <td>22030007</td>
+                        <td>Francisco</td>
+                        <td>305</td>
+                        <td>5</td>
+                        <td>Reforzar Química y evitar distracciones en el laboratorio.</td>
+                    </tr>
+                    <tr>
+                        <td>72516356</td>
+                        <td>Yexalen</td>
+                        <td>305</td>
+                        <td>5</td>
+                        <td>Mantener su desempeño y apoyar a sus compañeros en Informática.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <a class="boton volver" href="{{ url_for('panel_principal') }}">Volver al panel principal</a>
+
+    </main>
+
+</body>
+</html>

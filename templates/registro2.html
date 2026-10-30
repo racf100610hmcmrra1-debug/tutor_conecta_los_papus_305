@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - Tutor Conecta</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f5ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenedor {
+            width: 320px;
+            max-width: calc(100% - 60px);
+            margin: 70px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000015;
+        }
+
+        h1 {
+            color: #2563eb;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 11px;
+            margin-top: 6px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 22px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .enlace {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Tutor Conecta</h1>
+        <h2>Crear cuenta</h2>
+
+        <form action="login.html" method="get">
+
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email"
+                   placeholder="ejemplo@correo.com" required>
+
+            <label for="password">Contraseña</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Crea una contraseña"
+                   minlength="8" required>
+
+            <button type="submit">Registrarse</button>
+
+        </form>
+
+        <div class="enlace">
+            <p>¿Ya tienes una cuenta?</p>
+            <a href="login.html">Iniciar sesión</a>
+            <br><br>
+            <a href="index.html">Volver al panel principal</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel principal - Tutor Conecta</title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Tutor Conecta</h1>
+        <p>Panel de seguimiento escolar</p>
+    </header>
+
+    <main class="medio">
+
+        <h2>¿Qué deseas consultar?</h2>
+        <p>Selecciona una de las siguientes opciones.</p>
+
+        <div class="opciones">
+
+            <section class="tarjeta">
+                <h3>Registro de alumnos</h3>
+                <p>Consulta los promedios por grupo.</p>
+                <a class="boton" href="{{ url_for('registro_alumnos') }}">
+                    Ver alumnos
+                </a>
+            </section>
+
+            <section class="tarjeta">
+                <h3>Calificaciones</h3>
+                <p>Consulta las notas de cada alumno.</p>
+                <a class="boton" href="{{ url_for('calificaciones') }}">
+                    Ver calificaciones
+                </a>
+            </section>
+
+            <section class="tarjeta">
+                <h3>Asistencias</h3>
+                <p>Consulta las asistencias por materia.</p>
+                <a class="boton" href="{{ url_for('asistencias') }}">
+                    Ver asistencias
+                </a>
+            </section>
+
+            <section class="tarjeta">
+                <h3>Inasistencias</h3>
+                <p>Consulta las faltas de cada alumno.</p>
+                <a class="boton" href="{{ url_for('inasistencias') }}">
+                    Ver inasistencias
+                </a>
+            </section>
+
+            <section class="tarjeta">
+                <h3>Reportes</h3>
+                <p>Consulta los reportes escolares.</p>
+                <a class="boton" href="{{ url_for('reportes') }}">
+                    Ver reportes
+                </a>
+            </section>
+
+            <section class="tarjeta">
+                <h3>Quejas</h3>
+                <p>Consulta los comentarios de mejora.</p>
+                <a class="boton" href="{{ url_for('quejas') }}">
+                    Ver quejas
+                </a>
+            </section>
+
+        </div>
+
+        <div class="enlace">
+            <a href="{{ url_for('inicio_sesion') }}">Cerrar sesión</a>
+        </div>
+
+    </main>
+
+</body>
+</html>

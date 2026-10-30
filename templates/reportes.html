@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reportes - Tutor Conecta</title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Tutor Conecta</h1>
+        <p>Conectando familias</p>
+    </header>
+
+    <main class="medio">
+
+        <h2>Reportes de alumnos</h2>
+
+        <div class="tabla-envoltura">
+            <table border="1" cellpadding="6">
+                <thead>
+                    <tr>
+                        <th>Número de control</th>
+                        <th>Nombre</th>
+                        <th>Grupo</th>
+                        <th>Materia</th>
+                        <th>Incidencia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>24010001</td>
+                        <td>Maximiliano</td>
+                        <td>304</td>
+                        <td>—</td>
+                        <td>Sin reportes</td>
+                    </tr>
+                    <tr>
+                        <td>23020014</td>
+                        <td>Manuel</td>
+                        <td>301</td>
+                        <td>Inglés</td>
+                        <td>Uso de celular durante la clase.</td>
+                    </tr>
+                    <tr>
+                        <td>23020014</td>
+                        <td>Manuel</td>
+                        <td>301</td>
+                        <td>Matemáticas</td>
+                        <td>No entregó trabajos en la fecha indicada.</td>
+                    </tr>
+                    <tr>
+                        <td>22030007</td>
+                        <td>Francisco</td>
+                        <td>305</td>
+                        <td>Química</td>
+                        <td>Indisciplina en el laboratorio.</td>
+                    </tr>
+                    <tr>
+                        <td>72516356</td>
+                        <td>Yexalen</td>
+                        <td>305</td>
+                        <td>Informática</td>
+                        <td>Uso del equipo para fines ajenos a la clase.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <a class="boton volver" href="{{ url_for('panel_principal') }}">Volver al panel principal</a>
+
+    </main>
+
+</body>
+</html>

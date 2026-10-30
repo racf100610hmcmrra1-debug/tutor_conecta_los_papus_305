@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Panel principal</title>
+
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f5ff;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenedor {
+            width: 320px;
+            max-width: calc(100% - 60px);
+            margin: 50px auto;
+            padding: 25px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000015;
+        }
+
+        h1 {
+            color: #2563eb;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+        }
+
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 11px;
+            margin-top: 6px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 22px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .enlace {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>     
+        </style>
+    </head>
+    <body>
+        <h1>Panel principal</h1>
+        <ul>
+            <br><br>
+            <a href="index.html">Volver al panel principal</a>
+            <a class="boton" href="login.html">
+            Iniciar sesion nuevamente
+            <li><a href="{{ url_for('login') }}">Inicio de sesión</a></li>
+            <li><a href="{{ url_for('panel_principal') }}">Panel principal</a></li>
+            <li><a href="{{ url_for('registro_alumnos') }}">Registro de alumnos</a></li>
+            <li><a href="{{ url_for('reportes') }}">Reportes</a></li>
+            <li><a href="{{ url_for('inasistencias') }}">Inasistencias</a></li>
+            <li><a href="{{ url_for('quejas') }}">Quejas</a></li>
+            <li><a href="{{ url_for('calificaciones') }}">Calificaciones</a></li>
+        </ul>
+    </body>
+</html>

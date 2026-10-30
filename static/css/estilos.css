@@ -1,0 +1,218 @@
+/* ===== Tutor Conecta: estilos compartidos ===== */
+
+/* Base */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f0f5ff;
+    color: #1e293b;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+h3 {
+    color: #2563eb;
+    margin-top: 30px;
+}
+
+a {
+    color: #2563eb;
+}
+
+/* Encabezado azul */
+header {
+    background: #2563eb;
+    color: white;
+    padding: 25px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+header p {
+    margin: 5px 0 0;
+}
+
+/* Tarjeta blanca principal */
+main {
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 800px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px #00000015;
+}
+
+/* Variantes de ancho: <main class="..."> */
+main.inicio   { max-width: 600px;  margin-top: 80px; }
+main.angosto  { max-width: 400px;  margin-top: 60px; }
+main.estrecho { max-width: 700px; }
+main.medio    { max-width: 900px; }
+main.ancho    { max-width: 1100px; }
+
+/* Tarjeta del login */
+.contenedor {
+    width: 320px;
+    max-width: calc(100% - 60px);
+    margin: 50px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000015;
+}
+
+.contenedor h1 {
+    color: #2563eb;
+    text-align: center;
+}
+
+/* Botones */
+.boton,
+button {
+    display: inline-block;
+    padding: 13px 25px;
+    margin: 10px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.boton:hover,
+button:hover {
+    background: #1d4ed8;
+}
+
+.volver {
+    margin-top: 30px;
+}
+
+/* Panel: tarjetas de opciones */
+.opciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.tarjeta {
+    background: #f0f5ff;
+    padding: 25px;
+    border: 1px solid #dbe5fb;
+    border-radius: 12px;
+}
+
+.tarjeta h3 {
+    margin-top: 0;
+}
+
+.tarjeta p {
+    margin: 0 0 15px;
+    color: #475569;
+}
+
+.tarjeta .boton {
+    margin: 0;
+}
+
+/* Formularios (login y registro) */
+form {
+    text-align: left;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+}
+
+form input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+form button {
+    width: 100%;
+    margin: 25px 0 0;
+}
+
+/* Filtro de grupo (alumnos) */
+.filtro {
+    margin-bottom: 10px;
+}
+
+.filtro label {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+/* Tablas */
+.tabla-envoltura {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 15px auto;
+    width: 100%;
+}
+
+main.estrecho table {
+    max-width: 450px;
+}
+
+th {
+    background: #2563eb;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+}
+
+tbody tr:nth-child(even) td {
+    background: #f8fafc;
+}
+
+/* Textos auxiliares */
+.nota {
+    color: #64748b;
+    margin-top: -5px;
+}
+
+.enlace {
+    margin-top: 25px;
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 600px) {
+    main {
+        margin: 20px 10px;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+}

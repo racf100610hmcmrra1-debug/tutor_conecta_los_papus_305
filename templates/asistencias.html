@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asistencias - Tutor Conecta</title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/estilos.css') }}">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f5ff;
+            color: #1e293b;
+            text-align: center;
+        }
+
+        header {
+            background: #2563eb;
+            color: white;
+            padding: 25px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        main {
+            margin: 50px auto;
+            padding: 30px;
+            max-width: 1100px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #00000015;
+        }
+
+        .nota {
+            color: #64748b;
+            margin-top: -5px;
+        }
+
+        .tabla-envoltura {
+            overflow-x: auto;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 15px auto;
+            width: 100%;
+        }
+
+        th {
+            background: #2563eb;
+            color: white;
+        }
+
+        th, td {
+            padding: 10px;
+        }
+
+        .boton {
+            display: inline-block;
+            padding: 13px 25px;
+            margin-top: 30px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .boton:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tutor Conecta</h1>
+        <p>Conectando familias</p>
+    </header>
+
+    <main>
+
+        <h2>Asistencias de alumnos</h2>
+        <p class="nota">Clases por materia: 20</p>
+
+        <div class="tabla-envoltura">
+            <table border="1" cellpadding="6">
+                <thead>
+                    <tr>
+                        <th>Número de control</th>
+                        <th>Nombre</th>
+                        <th>Grupo</th>
+                        <th>Matemáticas</th>
+                        <th>Español</th>
+                        <th>Inglés</th>
+                        <th>Historia</th>
+                        <th>Física</th>
+                        <th>Química</th>
+                        <th>Informática</th>
+                        <th>Total de asistencias</th>
+                        <th>Porcentaje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>24010001</td>
+                        <td>Maximiliano</td>
+                        <td>304</td>
+                        <td>20</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>138</td>
+                        <td>98.6%</td>
+                    </tr>
+                    <tr>
+                        <td>23020014</td>
+                        <td>Manuel</td>
+                        <td>301</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>17</td>
+                        <td>20</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>19</td>
+                        <td>130</td>
+                        <td>92.9%</td>
+                    </tr>
+                    <tr>
+                        <td>22030007</td>
+                        <td>Francisco</td>
+                        <td>305</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>19</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>18</td>
+                        <td>20</td>
+                        <td>136</td>
+                        <td>97.1%</td>
+                    </tr>
+                    <tr>
+                        <td>72516356</td>
+                        <td>Yexalen</td>
+                        <td>305</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>20</td>
+                        <td>139</td>
+                        <td>99.3%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <a class="boton" href="{{ url_for('panel_principal') }}">Volver al panel principal</a>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor Conecta</title>
+    <link rel="stylesheet"
+      href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Tutor Conecta</h1>
+        <p>Conectando familias</p>
+    </header>
+
+    <main class="inicio">
+        <h2>¡Bienvenido a Tutor Conecta!</h2>
+
+        <p>
+            Aprende, comparte conocimientos y encuentra
+            el apoyo académico que necesitas.
+        </p>
+
+        <a class="boton" href="{{ url_for('registro') }}">
+            Registrarse
+        </a>
+
+        <a class="boton" href="{{ url_for('inicio_sesion') }}">
+            Iniciar sesión
+        </a>
+    </main>
+
+</body>
+</html>
